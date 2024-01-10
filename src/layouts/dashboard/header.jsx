@@ -4,10 +4,7 @@ import MuiAppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import Badge from '@mui/material/Badge';
 import MenuIcon from '@mui/icons-material/Menu';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import { useLocation } from 'react-router-dom'; // Importer useLocation depuis React Router
 
 const drawerWidth = 0;
 
@@ -31,8 +28,6 @@ const AppBar = styled(MuiAppBar, {
 }));
 
 export default function Header({ open, toggleDrawer }) {
-    const location = useLocation(); // Obtenir l'URL actuelle
-    const pageTitle = location.pathname.split('/').pop(); // Extraire le nom de la page à partir de l'URL
 
     return (
         <>
@@ -60,8 +55,9 @@ export default function Header({ open, toggleDrawer }) {
                         color="inherit"
                         noWrap
                         sx={{ flexGrow: 1 }}
+                        textAlign="center"
                     >
-                        {pageTitle}
+                        REACT CRUD PHP API MYSQL
                     </Typography>
                 </Toolbar>
             </AppBar>
